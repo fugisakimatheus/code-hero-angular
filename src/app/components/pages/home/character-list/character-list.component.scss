@@ -3,6 +3,24 @@
 .list-container {
   padding: $spacing-lg;
   margin-bottom: 60px;
+
+  .titles-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: $spacing-sm;
+
+    span {
+      margin: 0;
+      color: $colors-blue-dark;
+      font-weight: 600;
+      width: 100%;
+    }
+
+    span:nth-child(3) {
+      margin-left: -20px;
+    }
+  }
 }
 
 .spinner-container {

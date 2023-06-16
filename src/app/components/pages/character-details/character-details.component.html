@@ -6,7 +6,10 @@
     <div ngClass="content-container">
       <div ngClass="profile">
         <img [src]="imageUrl" [alt]="character.name" />
-        <div ngClass="profile-name">{{ character.name }}</div>
+        <div ngClass="profile-name">
+          <div ngClass="character-label">Nome: </div>
+          <div ngClass="character-name">{{ character.name }}</div>
+        </div>
       </div>
 
       <div ngClass="details">

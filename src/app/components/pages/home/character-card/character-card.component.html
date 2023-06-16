@@ -7,15 +7,15 @@
   </div>
 
   <div ngClass="card-block">
-    <p *ngFor="let serie of series.slice(0, 3)">{{ serie.name }}</p>
-    <p *ngIf="series.length > 3">...</p>
+    <p *ngFor="let serie of series.slice(0, 2)">{{ serie.name }}</p>
+    <p *ngIf="series.length > 2" ngClass="dots">...+{{ series.length - 2 }}</p>
     <p *ngIf="!series.length">No data...</p>
   </div>
 
   <div ngClass="card-block">
-    <p *ngFor="let event of events.slice(0, 3)">{{ event.name }}</p>
-    <p *ngIf="events.length > 3">...</p>
-    <p *ngIf="!events.length">No data...</p>
+    <p *ngFor="let story of stories.slice(0, 2)">{{ story.name }}</p>
+    <p *ngIf="stories.length > 2" ngClass="dots">...+{{ stories.length - 2 }}</p>
+    <p *ngIf="!stories.length">No data...</p>
   </div>
 
 </div>

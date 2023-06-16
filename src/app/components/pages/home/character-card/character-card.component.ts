@@ -18,8 +18,8 @@ export class CharacterCardComponent {
     return this.character.series.items;
   }
 
-  get events() {
-    return this.character.events.items;
+  get stories() {
+    return this.character.stories.items;
   }
 
   onClick() {
