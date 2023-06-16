@@ -1,0 +1,45 @@
+@import '../../../../variables.scss';
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 340px;
+  padding: $spacing-md $spacing-lg 0px $spacing-lg;
+
+  h1, label {
+    color: $colors-smoke-dark;
+  }
+
+  h1 {
+    font-weight: 700;
+  }
+
+  label {
+    font-weight: 500;
+    margin-bottom: $spacing-sm;
+  }
+
+  input {
+    height: 30px;
+    padding: 0px $spacing-md 0px $spacing-md;
+    border: 1px solid $colors-border;
+    border-radius: 4px;
+    margin-bottom: $spacing-sm;
+    font-size: $fonts-size-md;
+    color: $colors-smoke-light;
+    font-weight: 300;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+
+    &:focus, &:hover {
+      border-color: $colors-blue-dark;
+    }
+  }
+}
+
+.home-container {
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  position: relative;
+}

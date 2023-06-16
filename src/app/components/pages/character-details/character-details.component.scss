@@ -1,0 +1,69 @@
+@import '../../../../variables.scss';
+
+.details-container {
+  overflow: auto;
+  height: 100vh;
+  width: 100%;
+
+  .spinner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: 100%;
+  }
+
+  .content-container {
+    margin: $spacing-lg;
+    padding: $spacing-lg;
+    border-radius: 6px;
+    background: $colors-white;
+
+    .profile {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: $spacing-md;
+
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: $spacing-md;
+      }
+
+      .profile-name {
+        font-size: $fonts-size-xl;
+        font-weight: 700;
+        color: $colors-smoke-dark;
+      }
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+
+      .details-block {
+        background: $colors-snow-light;
+        border-radius: 6px;
+        margin-bottom: $spacing-md;
+        padding: $spacing-md;
+
+        .details-block-title {
+          font-size: $fonts-size-lg;
+          font-weight: 700;
+          color: $colors-smoke-dark;
+          margin-bottom: $spacing-md;
+        }
+
+        .details-block-content-item {
+          margin-bottom: $spacing-xs;
+          font-size: $fonts-size-sm;
+          font-weight: 400;
+          color: $colors-smoke-dark;
+        }
+      }
+    }
+  }
+}

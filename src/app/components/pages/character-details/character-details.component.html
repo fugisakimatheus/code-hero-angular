@@ -1,0 +1,51 @@
+
+<div ngClass="details-container">
+  <app-header [canGoBack]="true" />
+
+  <ng-template [ngIf]="character.id">
+    <div ngClass="content-container">
+      <div ngClass="profile">
+        <img [src]="imageUrl" [alt]="character.name" />
+        <div ngClass="profile-name">{{ character.name }}</div>
+      </div>
+
+      <div ngClass="details">
+        <div ngClass="details-block">
+          <div ngClass="details-block-title">Séries</div>
+          <div ngClass="details-block-content">
+            <div ngClass="details-block-content-item" *ngFor="let serie of series">
+              {{ serie.name }}
+            </div>
+            <div ngClass="details-block-content-item" *ngIf="!series.length">No data...</div>
+          </div>
+        </div>
+
+        <div ngClass="details-block">
+          <div ngClass="details-block-title">Eventos</div>
+          <div ngClass="details-block-content">
+            <div ngClass="details-block-content-item" *ngFor="let event of events">
+              {{ event.name }}
+            </div>
+            <div ngClass="details-block-content-item" *ngIf="!events.length">No data...</div>
+          </div>
+        </div>
+
+        <div ngClass="details-block">
+          <div ngClass="details-block-title">Histórias</div>
+          <div ngClass="details-block-content">
+            <div ngClass="details-block-content-item" *ngFor="let story of stories">
+              {{ story.name }}
+            </div>
+            <div ngClass="details-block-content-item" *ngIf="!stories.length">No data...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template [ngIf]="!character.id">
+    <div ngClass="spinner-container">
+      <app-spinner />
+    </div>
+  </ng-template>
+</div>

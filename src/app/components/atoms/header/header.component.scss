@@ -1,0 +1,70 @@
+@import '../../../../variables.scss';
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $spacing-lg;
+  height: 65px;
+  background: $colors-white;
+
+  .menu-container {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-bottom: 0;
+      margin-right: $spacing-md;
+      font-weight: 600;
+      color: $colors-smoke-dark;
+      font-size: $fonts-size-md;
+    }
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      background: $colors-snow-dark;
+      color: $colors-smoke-dark;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $fonts-size-sm;
+      font-weight: 700;
+      cursor: pointer;
+
+      &:hover {
+        background: $colors-blue-dark;
+        color: $colors-white;
+      }
+    }
+  }
+
+  .actions-container {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 28px;
+    }
+
+    button {
+      margin-right: $spacing-md;
+      width: 100px;
+      height: 28px;
+      border-radius: 4px;
+      background: $colors-white;
+      border: 1px solid $colors-smoke-dark;
+      color: $colors-smoke-dark;
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: $colors-blue-dark;
+        border-color: $colors-blue-dark;
+      }
+    }
+  }
+}

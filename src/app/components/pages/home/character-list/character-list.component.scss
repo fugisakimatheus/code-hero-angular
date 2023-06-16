@@ -1,0 +1,26 @@
+@import '../../../../../variables.scss';
+
+.list-container {
+  padding: $spacing-lg;
+  margin-bottom: 60px;
+}
+
+.spinner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 100%;
+}
+
+.paginator-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: $colors-white;
+}

@@ -1,0 +1,13 @@
+<div ngClass="home-container">
+  <app-header />
+
+  <div ngClass="search-container">
+    <h1>Busca de personagens</h1>
+    <label htmlFor="search">
+      Nome do personagem
+    </label>
+    <input id="search" type="text" placeholder="Search" [ngModel]="searchTerm" (ngModelChange)="searchCharacters($event)" />
+  </div>
+
+  <app-character-list [searchTerm]="searchTerm" />
+</div>

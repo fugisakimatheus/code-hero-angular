@@ -1,0 +1,43 @@
+<div ngClass="buttons-container">
+  <ng-container *ngIf="currentPage !== 1">
+    <button ngClass="outline" (click)="changePage(1)">
+      &lt;&lt;
+    </button>
+  </ng-container>
+
+  <button ngClass="outline" [disabled]="currentPage === 1" (click)="changePage(currentPage - 1)">
+    Anterior
+  </button>
+
+  <ng-container *ngIf="currentPage > 3">
+    <button disabled>
+      ...
+    </button>
+  </ng-container>
+
+  <ng-container *ngFor="let page of getPageRange()">
+    <button [ngClass]="page === currentPage ? 'solid' : 'outline'" (click)="changePage(page)">
+      {{ page }}
+    </button>
+  </ng-container>
+
+  <ng-container *ngIf="currentPage <= totalPages && totalPages > maxPagesToShow">
+    <button disabled>
+      ...
+    </button>
+  </ng-container>
+
+  <button
+    [disabled]="currentPage === totalPages || totalPages === 0"
+    ngClass="outline"
+    (click)="changePage(currentPage + 1)"
+  >
+    Próximo
+  </button>
+
+  <ng-container *ngIf="currentPage !== totalPages && totalPages !== 0">
+    <button (click)="changePage(totalPages)" ngClass="outline">
+      &gt;&gt;
+    </button>
+  </ng-container>
+</div>

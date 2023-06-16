@@ -1,0 +1,21 @@
+<div ngClass="card-container" (click)="onClick()">
+  <div ngClass="card-block">
+    <div ngClass="card-summary">
+      <img ngClass="card-image" [src]="imageUrl" [alt]="character.name">
+      <p ngClass="card-name">{{ character.name }}</p>
+    </div>
+  </div>
+
+  <div ngClass="card-block">
+    <p *ngFor="let serie of series.slice(0, 3)">{{ serie.name }}</p>
+    <p *ngIf="series.length > 3">...</p>
+    <p *ngIf="!series.length">No data...</p>
+  </div>
+
+  <div ngClass="card-block">
+    <p *ngFor="let event of events.slice(0, 3)">{{ event.name }}</p>
+    <p *ngIf="events.length > 3">...</p>
+    <p *ngIf="!events.length">No data...</p>
+  </div>
+
+</div>

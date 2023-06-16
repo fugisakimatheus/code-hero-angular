@@ -1,0 +1,19 @@
+<ng-template [ngIf]="characterList.length > 0">
+  <div ngClass="list-container">
+    <app-character-card *ngFor="let character of characterList" [character]="character" (onClickCharacter)="onCharacterDetails($event)" />
+  </div>
+
+  <div ngClass="paginator-container">
+    <app-paginator
+      [currentPage]="page"
+      [totalPages]="totalPages"
+      (onPageChange)="onChangePage($event)"
+    />
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="characterList.length === 0">
+  <div ngClass="spinner-container">
+    <app-spinner />
+  </div>
+</ng-template>

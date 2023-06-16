@@ -1,0 +1,56 @@
+@import '../../../../variables.scss';
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: $spacing-md;
+
+  button {
+    min-height: 30px;
+    min-width: 30px;
+    border: 1px solid $colors-border;
+    border-radius: 4px;
+    margin-right: $spacing-xs;
+    background: $colors-white;
+    color: $colors-smoke-dark;
+    font-weight: 300;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      border-color: $colors-blue-dark;
+    }
+
+    &:disabled {
+      border-color: $colors-border;
+      color: $colors-smoke-light;
+      background: $colors-snow-light;
+      cursor: not-allowed;
+    }
+  }
+
+  .outline {
+    background: $colors-white;
+    border-color: $colors-blue-dark;
+    color: $colors-blue-dark;
+
+    &:hover {
+      border-color: $colors-blue-light;
+      color: $colors-blue-light;
+    }
+  }
+
+  .solid {
+    background: $colors-blue-dark;
+    border-color: $colors-blue-dark;
+    color: $colors-white;
+
+    &:hover {
+      background: $colors-blue-light;
+      border-color: $colors-blue-light;
+    }
+  }
+}
