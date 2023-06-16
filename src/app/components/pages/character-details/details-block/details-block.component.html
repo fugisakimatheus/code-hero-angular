@@ -1,0 +1,9 @@
+<div ngClass="details-block">
+  <div ngClass="details-block-title">{{ title }}</div>
+  <div ngClass="details-block-content">
+    <div ngClass="details-block-content-item" *ngFor="let item of items">
+      {{ item }}
+    </div>
+    <div ngClass="details-block-content-item" *ngIf="!items.length">No data...</div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+@import '../../../../../variables.scss';
+
+.details-block {
+  background: $colors-snow-light;
+  border-radius: 6px;
+  margin-bottom: $spacing-md;
+  padding: $spacing-md;
+
+  .details-block-title {
+    font-size: $fonts-size-lg;
+    font-weight: 700;
+    color: $colors-smoke-dark;
+    margin-bottom: $spacing-md;
+  }
+
+  .details-block-content-item {
+    margin-bottom: $spacing-xs;
+    font-size: $fonts-size-sm;
+    font-weight: 400;
+    color: $colors-smoke-dark;
+  }
+}

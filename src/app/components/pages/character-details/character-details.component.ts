@@ -29,15 +29,15 @@ export class CharacterDetailsComponent implements OnInit {
   }
 
   get series() {
-    return this.character.series.items;
+    return this.character.series.items.map((item) => item.name);
   }
 
   get events() {
-    return this.character.events.items;
+    return this.character.events.items.map((item) => item.name);
   }
 
   get stories() {
-    return this.character.stories.items;
+    return this.character.stories.items.map((item) => item.name);
   }
 
   goBack() {

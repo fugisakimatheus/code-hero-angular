@@ -13,12 +13,14 @@ import { CharacterCardComponent } from './components/pages/home/character-card/c
 import { PaginatorComponent } from './components/atoms/paginator/paginator.component';
 import { HeaderComponent } from './components/atoms/header/header.component';
 import { SpinnerComponent } from './components/atoms/spinner/spinner.component';
+import { DetailsBlockComponent } from './components/pages/character-details/details-block/details-block.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CharacterDetailsComponent,
+    DetailsBlockComponent,
     CharacterListComponent,
     CharacterCardComponent,
     PaginatorComponent,
