@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import {
+  characterDetailRequestMock,
   characterListRequestMockPage1,
   characterListRequestMockPage2,
   characterListRequestMockSearch,
@@ -23,12 +24,19 @@ test.describe('Home', () => {
 
   test('Should go to character details', async ({ page }) => {
     await page.route(
-      'https://gateway.marvel.com/v1/public/characters?apikey=73a70d052907f8020f59ffd206209d48&limit=8&offset=0',
-      async (route) => {
-        await route.fulfill({
-          status: 200,
-          json: characterListRequestMockPage1,
-        });
+      /https:\/\/gateway.marvel.com\/v1\/public\/characters/,
+      async (route, request) => {
+        if (request.url().includes('1017100')) {
+          await route.fulfill({
+            status: 200,
+            json: characterDetailRequestMock,
+          });
+        } else {
+          await route.fulfill({
+            status: 200,
+            json: characterListRequestMockPage1,
+          });
+        }
       }
     );
 
