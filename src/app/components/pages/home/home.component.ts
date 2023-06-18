@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.searchTermChanged
-      .pipe(debounceTime(800), distinctUntilChanged())
+      .pipe(debounceTime(600), distinctUntilChanged())
       .subscribe((searchTerm) => {
         this.searchTerm = searchTerm;
       });

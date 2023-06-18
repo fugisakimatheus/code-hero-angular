@@ -1,5 +1,5 @@
-import { Location } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +9,9 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent {
   @Input() canGoBack: boolean = false;
 
-  constructor(private location: Location) {}
+  constructor(private router: Router) {}
 
   goBack() {
-    this.location.back();
+    this.router.navigate(['/']);
   }
 }

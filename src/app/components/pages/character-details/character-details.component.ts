@@ -1,6 +1,5 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { CharacterModel } from 'src/app/models/character';
 import { CharacterService } from 'src/app/services/character.service';
 
@@ -14,8 +13,7 @@ export class CharacterDetailsComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private characterService: CharacterService,
-    private location: Location
+    private characterService: CharacterService
   ) {}
 
   ngOnInit(): void {
@@ -38,10 +36,6 @@ export class CharacterDetailsComponent implements OnInit {
 
   get stories() {
     return this.character.stories.items.map((item) => item.name);
-  }
-
-  goBack() {
-    this.location.back();
   }
 
   getCharacterDetails(id: number) {
